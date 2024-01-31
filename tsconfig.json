@@ -5,6 +5,7 @@
     "target": "es2022",
     "allowJs": true,
     "resolveJsonModule": true,
+    "noImplicitAny": true,
     "moduleDetection": "force",
     "isolatedModules": true,
     "strict": true,
@@ -12,6 +13,8 @@
     "moduleResolution": "NodeNext",
     "module": "NodeNext",
     "outDir": "dist",
-    "lib": ["es2022"]
+    "lib": [
+      "es2022"
+    ]
   }
 }
