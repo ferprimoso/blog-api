@@ -1,40 +1,52 @@
+import { type Request, type Response, type NextFunction } from 'express'
+import asyncHandler from 'express-async-handler'
+import { body, validationResult } from 'express-validator'
 import mongoose from 'mongoose'
 import { Post } from '../models/Post'
 import { Comment } from '../models/Comment'
-import asyncHandler from 'express-async-handler'
-import { type Request, type Response, type NextFunction } from 'express'
 
 export const postsController = {
-  // Get method for reading all posts
   getAllPosts: asyncHandler(async (req: Request, res: Response) => {
     const posts = await Post.find()
     res.json(posts)
   }),
 
-  // Post method for creating a post
-  createPost: asyncHandler(async (req: Request, res: Response) => {
-    const response = await Post.create(req.body)
-    res.status(201).json(response)
-  }),
+  createPost: [
+    // Validate and sanitize fields.
+    body('author').trim().notEmpty().withMessage('Author is required').escape(),
+    body('title').trim().notEmpty().withMessage('Title is required').escape(),
+    body('text').trim().notEmpty().withMessage('Text is required').escape(),
 
-  // Delete method for deleting a post
+    // Process request after validation and sanitization.
+    asyncHandler(async (req: Request, res: Response) => {
+      // Extract the validation errors from a request.
+      const errors = validationResult(req)
+
+      if (!errors.isEmpty()) {
+        res.status(400).json({ errors: errors.array() })
+      } else {
+        const response = await Post.create(req.body)
+
+        res.status(201).json(response)
+      }
+    }),
+  ],
+
   deletePost: asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     const { postId } = req.params
 
     if (!mongoose.isValidObjectId(postId)) {
       // No valid results
-      const err = new Error('Invalid request. Invalid postId')
-      res.status(400).json({ err })
+      res.status(400).json({ msg: 'Invalid request. Invalid postId' })
+      return
     }
 
     const deletedPost = await Post.findByIdAndDelete(postId)
 
     if (deletedPost === null) {
       // No results.
-      const error = new Error('Invalid request. Post not found')
-      res.status(404) // using response here
-      next(error)
-      return // Use return to exit the function after sending the response
+      res.status(404).json({ msg: 'Invalid request. Post not found' })
+      return
     }
 
     await Comment.deleteMany({ postId })

@@ -222,3 +222,253 @@
 {"level":"debug","message":"Using .env file to supply config environment variables"}
 {"level":"debug","message":"Logging initialized at debug level"}
 {"level":"debug","message":"Using .env file to supply config environment variables"}
+{"level":"debug","message":"Logging initialized at debug level"}
+{"level":"debug","message":"Using .env file to supply config environment variables"}
+{"level":"info","message":"  App is running at http://localhost:%d in %s mode"}
+{"level":"info","message":"  Press CTRL-C to stop\n"}
+{"level":"debug","message":"Logging initialized at debug level"}
+{"level":"debug","message":"Using .env file to supply config environment variables"}
+{"level":"debug","message":"Logging initialized at debug level"}
+{"level":"debug","message":"Using .env file to supply config environment variables"}
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[31merror[39m:   not found
+[31merror[39m:   not found
+[31merror[39m:   not found
+[31merror[39m:   not found
+[31merror[39m:   not found
+[31merror[39m:   not found
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[31merror[39m:    not found
+[31merror[39m:    not found
+[31merror[39m:    not found
+[31merror[39m:    not found
+[31merror[39m:    not found
+[31merror[39m:    not found
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB
+[34mdebug[39m:   Logging initialized at debug level
+[34mdebug[39m:   Using .env file to supply config environment variables
+[32minfo[39m:      App is running at http://localhost:%d in %s mode
+[32minfo[39m:      Press CTRL-C to stop
+
+[32minfo[39m:    Connected to mongoDB

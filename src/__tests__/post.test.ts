@@ -34,7 +34,7 @@ describe('Posts', () => {
     await dbhandler.closeDatabase()
   })
 
-  describe('GET /posts', () => {
+  describe('Get all posts - GET /posts', () => {
     it('Should return an empty array if theres no posts', async () => {
       const response = await supertest(app).get('/api/posts')
 
@@ -54,7 +54,7 @@ describe('Posts', () => {
     })
   })
 
-  describe('POST /posts', () => {
+  describe('Create new post - POST /posts', () => {
     it('Should create a post', async () => {
       const response = await supertest(app).post('/api/posts').send(postPayload)
 
@@ -62,29 +62,40 @@ describe('Posts', () => {
       expect(response.body.author).toBe(postPayload.author)
       expect(response.body.title).toBe(postPayload.title)
     })
-    xit('Should handle empty post request', async () => {
+    it('Should return a 400 if payload is empty', async () => {
       const response = await supertest(app).post('/api/posts').send({})
 
       expect(response.status).toBe(400) // Expecting a Bad Request status code
-      expect(response.body).toHaveProperty('error')
-      expect(response.body.error).toBe('Invalid request. Missing required data.')
+    })
+    it('Should return a 400 if payload data is invalid', async () => {
+      const response = await supertest(app).post('/api/posts').send({
+        author: '',
+        title: '',
+        text: '',
+      }) // all fields empty
+
+      expect(response.status).toBe(400) // Expecting a Bad Request status code
+      expect(response.body.errors).toHaveLength(3) // Expect all 3 fields to give error
+      expect(response.body.errors[0].msg).toBe('Author is required')
     })
   })
 
-  describe('DELETE /posts/:postId', () => {
+  describe('Delete post by ID - DELETE /posts/:postId', () => {
     it('Should delete a post', async () => {
       const post = await Post.create(postPayload)
       const postIdToDelete = post._id.toString()
-
       const response = await supertest(app).delete('/api/posts/' + postIdToDelete)
 
       expect(response.status).toBe(200)
     })
-    it('Should return a 404 if post doesnt exist', async () => {
+    it('Should return a 400 if postId is not valid', async () => {
+      const postIdToDelete = 'notvalidId'
+      const response = await supertest(app).delete('/api/posts/' + postIdToDelete)
+
+      expect(response.status).toBe(400)
+    })
+    it('Should return a 404 if postId is not found', async () => {
       const postIdToDelete = new mongoose.Types.ObjectId().toString()
-
-      console.log(postIdToDelete)
-
       const response = await supertest(app).delete('/api/posts/' + postIdToDelete)
 
       expect(response.status).toBe(404)

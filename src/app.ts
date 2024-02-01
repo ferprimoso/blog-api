@@ -3,24 +3,25 @@ import cors from 'cors'
 import compression from 'compression'
 import mongoose from 'mongoose'
 import { MONGODB_URI } from './util/secrets'
+import logger from './util/logger'
 import router from './router'
-
-// import cors from 'cors'
 
 // Create Express Server
 const app = express()
 
 // Connect to MongoDB
-const mongoUrl = MONGODB_URI
-
-main().catch((err) => {
-  console.log(err)
-})
-async function main(): Promise<void> {
-  if (mongoUrl === undefined) {
-    throw new Error('MongoDB connection URL is undefined')
-  }
-  await mongoose.connect(mongoUrl)
+if (MONGODB_URI !== undefined) {
+  mongoose
+    .connect(MONGODB_URI, { retryWrites: true, w: 'majority' })
+    .then(() => {
+      logger.info('Connected to mongoDB')
+    })
+    .catch((error) => {
+      logger.error('Unable to connect: ')
+      logger.error(error)
+    })
+} else {
+  logger.error('MongoDB connection URL is undefined')
 }
 
 // Express Configuration
@@ -32,5 +33,13 @@ app.use(express.urlencoded({ extended: true }))
 
 // Routes
 app.use('/api', router)
+
+// Error handler
+app.use((req, res, next) => {
+  const error = new Error(' not found')
+  logger.error(error)
+
+  return res.status(404).json({ message: error.message })
+})
 
 export default app
