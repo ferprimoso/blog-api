@@ -8,7 +8,7 @@ import { Comment } from '../models/Comment'
 export const postsController = {
   getAllPosts: asyncHandler(async (req: Request, res: Response) => {
     const posts = await Post.find()
-    res.json(posts)
+    res.status(200).json(posts)
   }),
 
   createPost: [
@@ -35,16 +35,16 @@ export const postsController = {
   deletePost: asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     const { postId } = req.params
 
+    // Check if postID is valid
     if (!mongoose.isValidObjectId(postId)) {
-      // No valid results
       res.status(400).json({ msg: 'Invalid request. Invalid postId' })
       return
     }
 
     const deletedPost = await Post.findByIdAndDelete(postId)
 
+    // Check if postId exists
     if (deletedPost === null) {
-      // No results.
       res.status(404).json({ msg: 'Invalid request. Post not found' })
       return
     }

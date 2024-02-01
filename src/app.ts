@@ -5,6 +5,7 @@ import mongoose from 'mongoose'
 import { MONGODB_URI } from './util/secrets'
 import logger from './util/logger'
 import router from './router'
+import helmet from 'helmet'
 
 // Create Express Server
 const app = express()
@@ -26,10 +27,11 @@ if (MONGODB_URI !== undefined) {
 
 // Express Configuration
 app.set('port', process.env.PORT ?? 3000)
-app.use(cors())
 app.use(compression())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
+app.use(helmet())
+app.use(cors())
 
 // Routes
 app.use('/api', router)

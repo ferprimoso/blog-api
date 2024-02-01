@@ -6,6 +6,10 @@ import { commentsController } from './controllers/commentsController'
 
 const router = express.Router()
 
+// Auth Routes
+
+router.get('/login')
+
 // Posts Routes
 router.get('/posts', postsController.getAllPosts)
 
