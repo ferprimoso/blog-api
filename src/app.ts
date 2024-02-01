@@ -3,7 +3,7 @@ import cors from 'cors'
 import compression from 'compression'
 import mongoose from 'mongoose'
 import { MONGODB_URI } from './util/secrets'
-import router from './routes/router'
+import router from './router'
 
 // import cors from 'cors'
 
