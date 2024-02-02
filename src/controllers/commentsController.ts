@@ -60,13 +60,18 @@ export const commentsController = {
   // Post method for creating a post
   likePostComment: asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     const { commentId } = req.params
+
+    // Check if postID is valid
+    if (!mongoose.isValidObjectId(commentId)) {
+      res.status(400).json({ msg: 'Invalid request. Invalid postId' })
+      return
+    }
+
     const comment = await Comment.findById(commentId)
 
     if (comment === null) {
       // No results.
-      const err = new Error('Comment not found')
-      res.status(404)
-      next(err)
+      res.status(404).json({ msg: 'Comment not found' })
       return
     }
 
@@ -74,22 +79,26 @@ export const commentsController = {
 
     // Save the updated comment
     await comment.save()
-    res.json({ like: comment.like, msg: 'Comment disliked with success' })
+    res.status(200).json({ like: comment.like, msg: 'Comment disliked with success' })
   }),
 
   // Post method for disliking a comment
   dislikePostComment: asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     const { commentId } = req.params
+
+    // Check if postID is valid
+    if (!mongoose.isValidObjectId(commentId)) {
+      res.status(400).json({ msg: 'Invalid request. Invalid postId' })
+      return
+    }
+
     const comment = await Comment.findById(commentId)
 
     if (comment === null) {
       // No results.
-      const err = new Error('Comment not found')
-      res.status(404)
-      next(err)
+      res.status(404).json({ msg: 'Comment not found' })
       return
     }
-
     comment.dislike += 1
 
     // Save the updated comment
@@ -101,15 +110,20 @@ export const commentsController = {
   deletePostComment: asyncHandler(async (req: Request, res: Response, next: NextFunction) => {
     const { commentId } = req.params
 
+    // Check if postID is valid
+    if (!mongoose.isValidObjectId(commentId)) {
+      res.status(400).json({ msg: 'Invalid request. Invalid postId' })
+      return
+    }
+
     const deletedComment = await Comment.findByIdAndDelete(commentId)
 
     if (deletedComment === null) {
       // No results.
-      const err = new Error('Comment not found')
-      res.status(404)
-      next(err)
+      res.status(404).json({ msg: 'Comment not found' })
+      return
     }
 
-    res.status(201).json({ msg: 'Comment deleted successfully' })
+    res.status(200).json({ msg: 'Comment deleted successfully' })
   }),
 }

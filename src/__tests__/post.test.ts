@@ -89,16 +89,6 @@ describe('Posts', () => {
         expect(response.body.author).toBe(postPayload.author)
         expect(response.body.title).toBe(postPayload.title)
       })
-      it('Should create a post', async () => {
-        const response = await supertest(app)
-          .post('/api/posts')
-          .set('Authorization', `Bearer ${authToken}`)
-          .send(postPayload)
-
-        expect(response.status).toBe(201)
-        expect(response.body.author).toBe(postPayload.author)
-        expect(response.body.title).toBe(postPayload.title)
-      })
       it('Should return a 400 if payload is empty', async () => {
         const response = await supertest(app).post('/api/posts').set('Authorization', `Bearer ${authToken}`).send({})
 

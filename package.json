@@ -9,7 +9,8 @@
     "build": "tsc",
     "start": "node dist/server.js",
     "dev": "nodemon",
-    "test": "jest --watchAll --runInBand"
+    "test": "jest",
+    "watch-test": "npm run test -- --watchAll"
   },
   "keywords": [],
   "author": "",
