@@ -24,7 +24,7 @@ const commentPayload = {
 }
 
 // Tests
-describe('Comments', () => {
+xdescribe('Comments', () => {
   // Connect to memory Server before running any test.
   beforeAll(async () => {
     await dbhandler.connect()

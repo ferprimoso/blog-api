@@ -5,12 +5,10 @@ import { body, validationResult } from 'express-validator'
 import { JWT_SECRET } from '../util/secrets'
 import { type Request } from 'express'
 
-// Extend the existing Request interface to include the 'user' property
 interface RequestWithUser extends Request {
   user?: {
     id: string
     username: string
-    // Add other user properties as needed
   }
 }
 
@@ -27,7 +25,6 @@ export const authController = {
         res.status(401).json({ errors: errors.array() })
       } else {
         // If validation passes, proceed with authentication
-
         const username: string = req.body.username
         const password: string = req.body.password
 
@@ -43,7 +40,7 @@ export const authController = {
         // User authenticated, generate a JWT
         const accessToken = jwt.sign(user, JWT_SECRET as jwt.Secret, { expiresIn: '1h' })
 
-        res.json({ accessToken })
+        res.status(200).json({ accessToken })
       }
     }),
   ],

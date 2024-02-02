@@ -11,7 +11,6 @@ import authenticateToken from './middlewares/autheticateToken'
 const router = express.Router()
 
 // Auth Routes
-
 router.post('/login', authController.login)
 
 // Posts Routes

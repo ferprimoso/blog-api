@@ -2,12 +2,10 @@ import jwt from 'jsonwebtoken'
 import { JWT_SECRET } from '../util/secrets'
 import { type Request, type Response, type NextFunction } from 'express'
 
-// Extend the existing Request interface to include the 'user' property
 interface RequestWithUser extends Request {
   user?: {
     id: string
     username: string
-    // Add other user properties as needed
   }
 }
 
