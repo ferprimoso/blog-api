@@ -1,25 +1,37 @@
 import mongoose from 'mongoose'
 import bcrypt from 'bcryptjs'
-const Schema = mongoose.Schema
 
-const AuthSchema = new Schema({
+export interface AuthDocument extends mongoose.Document {
+  username: string
+  password: string
+  isValidPassword: (candidatePassword: string) => Promise<boolean>
+}
+
+const AuthSchema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
 })
 
 AuthSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) {
+  const auth = this as AuthDocument
+
+  if (!auth.isModified('password')) {
     next()
     return
   }
   try {
-    const salt = await bcrypt.genSalt(10)
-    this.password = await bcrypt.hash(this.password, salt)
+    auth.password = await bcrypt.hash(auth.password, 10)
     next()
   } catch (error) {
     console.error('Error: ', error)
   }
 })
 
+AuthSchema.methods.isValidPassword = async function (candidatePassword: string): Promise<boolean> {
+  const auth = this as AuthDocument
+
+  return await bcrypt.compare(candidatePassword, auth.password)
+}
+
 // Export model
-export const Auth = mongoose.model('Auth', AuthSchema)
+export const Auth = mongoose.model<AuthDocument>('Auth', AuthSchema)
